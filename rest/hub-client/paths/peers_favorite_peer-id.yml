@@ -1,0 +1,42 @@
+put:
+  summary: Add peer to Favorites
+  description:
+    The endpoint allows to add peer to user's Favorite peers
+  tags:
+    - Peer
+    - User
+    - Favorite
+  parameters:
+    - name: peer-id
+      in: path
+      description: id of peer
+      required: true
+      type: string
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'          
+delete:
+  summary: Remove peer from Favorites
+  description:
+    The endpoint allows to remove peer from user's Favorite peers
+  tags:
+    - Peer
+    - User
+    - Favorite
+  parameters:
+    - name: peer-id
+      in: path
+      description: id of peer
+      required: true
+      type: string
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

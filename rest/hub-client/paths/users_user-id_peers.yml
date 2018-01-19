@@ -1,0 +1,25 @@
+get:
+  summary: View user peers
+  description:
+    The endpoint returns peers of user
+  tags:
+    - User
+    - Peer
+  parameters:
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64      
+  responses:
+    200:
+      description: An array of peers
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Peer'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

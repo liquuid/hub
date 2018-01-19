@@ -1,0 +1,41 @@
+type: object
+properties:
+  peer_id:
+    type: string
+    description: Unique identifier representing a specific peer
+  peer_name:
+    type: string
+    description: Name of peer
+  peer_ip:
+    type: string
+    description: IP of peer
+  peer_status:
+    type: string
+    description: Status of peer
+    enum:
+      - ONLINE
+      - OFFLINE
+  peer_owner_id:
+    type: string
+    description: Id fo peer owner
+  peer_owner_name:
+    type: string
+    description: Name of peer owner 
+  peer_version:
+    type: string
+    description: Version of peer
+  peer_registration_date:
+    type: string
+    format: date
+    description: Registration date of peer
+  peer_scope:
+    type: string
+    description: Scope of peer
+    enum:
+      - PUBLIC
+      - PRIVATE
+      - SHARED
+  resource_hosts:
+    type: array
+    items:
+      $ref: '#/definitions/ResourceHost'

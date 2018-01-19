@@ -1,0 +1,20 @@
+put:
+  summary: Reject friendship request
+  description:
+    The endpoint allows to reject friendship request from user
+  tags:
+    - Friend
+  parameters:
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64           
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'      

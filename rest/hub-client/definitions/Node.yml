@@ -1,0 +1,19 @@
+type: object
+properties:
+  hostname: 
+    type: string
+    description: Hostname of container
+  templateId:
+    type: string
+    description: Id of template to use for container cloning
+  templateName:
+    type: string
+    description: Name of template to use for container creation (WILL BE REMOVED IN THE FUTURE!)
+  peerId:
+    type: string
+    description: Id of peer where container will be created
+  resourceHostId:
+    type: string
+    description: Id of resource host where container will be created
+  quota:
+    $ref: '#/definitions/ContainerQuota'

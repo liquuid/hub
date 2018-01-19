@@ -1,0 +1,20 @@
+delete:
+  summary: Break off friendship
+  description:
+    The endpoint allows to break off friendship with user
+  tags:
+    - Friend
+  parameters:
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64           
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'    

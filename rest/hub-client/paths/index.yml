@@ -1,0 +1,68 @@
+/login:
+  $ref: ./login.yml
+/environments:
+  $ref: ./environments.yml
+/peers/{specifier}:
+  $ref: ./peers.yml
+/peers/{peer-id}/scope/{peer-scope}:
+  $ref: ./peers_peer-id_scope_peer-scope.yml
+/peers/{peer-id}/name/{peer-name}:
+  $ref: ./peers_peer-id_name_peer-name.yml
+/environments/{env-id}:
+  $ref: ./environments_env-id.yml
+/environments/{env-id}/containers/{cont-id}:
+  $ref: ./environments_env-id_containers_cont-id.yml
+/environments/{env-id}/containers/{cont-id}/start:
+  $ref: ./environments_env-id_containers_cont-id_start.yml
+/environments/{env-id}/containers/{cont-id}/stop:
+  $ref: ./environments_env-id_containers_cont-id_stop.yml
+
+/environments/{env-id}/ssh-keys:
+  $ref: ./environments_env-id_ssh-keys.yml
+/environments/{env-id}/ssh-keys/add:
+  $ref: ./environments_env-id_ssh-keys_add.yml
+/environments/{env-id}/ssh-keys/remove:
+  $ref: ./environments_env-id_ssh-keys_remove.yml
+
+/peers/{peer-id}/share/{user-id}:
+  $ref: ./peers_peer-id_share_user-id.yml
+
+/peers/favorite/{peer-id}:
+  $ref: ./peers_favorite_peer-id.yml
+
+/balance:
+  $ref: ./balance.yml
+
+/users/{user-id}:
+  $ref: ./users_user-id.yml
+/users/search:
+  $ref: ./users_search.yml
+
+/users/{user-id}/peers:
+  $ref: ./users_user-id_peers.yml
+
+/users/{user-id}/organizations:
+  $ref: ./users_user-id_organizations.yml
+/organizations:
+  $ref: ./organizations.yml
+
+/domains:
+  $ref: ./domains.yml
+/domains/{domain}:
+  $ref: ./domains_domain.yml
+
+/domains/assignments:
+  $ref: ./domains_assignments.yml
+
+/friends:
+  $ref: ./friends.yml
+/friends/{user-id}:
+  $ref: ./friends_user-id.yml
+/friends/{user-id}/request:
+  $ref: ./friends_user-id_request.yml
+/friends/{user-id}/cancel:
+  $ref: ./friends_user-id_cancel.yml
+/friends/{user-id}/accept:
+  $ref: ./friends_user-id_accept.yml
+/friends/{user-id}/reject:
+  $ref: ./friends_user-id_reject.yml

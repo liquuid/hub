@@ -1,0 +1,27 @@
+post:
+  summary: Authenticate
+  description:
+    The endpoint allows client to authenticate with Hub
+  tags:
+    - Auth
+    - Login
+  consumes:
+  - application/x-www-form-urlencoded        
+  parameters:
+    - name: email
+      in: formData
+      description: user email used as username when authenticating
+      required: true
+      type: string
+    - name: password
+      in: formData
+      description: user password
+      required: true
+      type: string          
+  responses:
+    200:
+      description: Client authenticated successfully. Response contains cookie named SUBUTAI_HUB_SESSION that should be present in all subsequent requests!
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

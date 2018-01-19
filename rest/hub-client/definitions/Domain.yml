@@ -1,0 +1,13 @@
+type: object
+properties:
+  name:
+    description: full domain name e.g. my-domain.hub.net or sub-domain.my-domain.hub.net
+    type: string
+  state:
+    description: state of domain 
+    type: string
+    enum:
+      - CREATING
+      - RESERVED
+      - ASSIGNED
+      - DESTROYING

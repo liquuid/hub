@@ -1,0 +1,25 @@
+get:
+  summary: Environment ssh keys
+  description:
+    The endpoint returns ssh keys assigned to environment
+  tags:
+    - Environment
+    - SSH
+  parameters:
+    - name: env-id
+      in: path
+      description: id of environment
+      required: true
+      type: string
+
+  responses:
+    200:
+      description: An array of ssh keys
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/SshKey'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

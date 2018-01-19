@@ -1,0 +1,24 @@
+get:
+  summary: View organizations
+  description:
+    The endpoint returns organizations of current user.
+  tags:
+    - Organization
+  parameters:
+    - name: own
+      in: query
+      description: true to return user own organizations, false to return organizations where user is member
+      required: false
+      type: boolean
+      default: false
+  responses:
+    200:
+      description: An array of organizations
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Organization'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,11 @@
+type: object
+properties:
+  containerSize: 
+    type: string
+    description: size of container (selects resource quotas for container and respectively effects pricing)
+    enum:
+      - TINY
+      - SMALL
+      - MEDIUM
+      - LARGE
+      - HUGE

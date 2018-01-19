@@ -1,0 +1,60 @@
+get:
+  summary: Environments
+  description:
+    The endpoint returns information about the user environments
+  tags:
+    - Environment
+    - Container
+  responses:
+    200:
+      description: An array of environments
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Environment'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'
+post:
+  summary: Create Environment
+  description:
+    The endpoint allows to create environment
+  tags:
+    - Environment
+    - Container
+  parameters:
+    - name: createRequest
+      in: body
+      description: environment creation request describing environment
+      required: true
+      schema:
+        $ref: '#/definitions/CreateEnvironmentRequest'
+  responses:
+    202:
+      description: Http ACCEPTED status is returned in case environment creation started successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'
+put:
+  summary: Modify Environment
+  description:
+    "The endpoint allows to modify environment: add new containers or remove existing ones"
+  tags:
+    - Environment
+    - Container
+  parameters:
+    - name: modifyRequest
+      in: body
+      description: environment modification request describing changes in environment
+      required: true
+      schema:
+        $ref: '#/definitions/ModifyEnvironmentRequest'
+  responses:
+    202:
+      description: Http ACCEPTED status is returned in case environment modification started successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

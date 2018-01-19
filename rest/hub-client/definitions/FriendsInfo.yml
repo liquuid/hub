@@ -1,0 +1,11 @@
+type: object
+properties:
+  friends:
+    description: friends (array of Friends with status FRIEND)
+    $ref: '#/definitions/Friend'
+  outgoingRequests:
+    description: user initiated friendship requests (array of Friends with status REQUEST)
+    $ref: '#/definitions/Friend'
+  incomingRequests:
+    description: incoming friendship requests (array of Friends with status REQUEST)
+    $ref: '#/definitions/Friend'

@@ -1,0 +1,15 @@
+type: object
+properties:
+  environmentId:
+    type: string
+    description: ID of environment
+  add:
+    type: array
+    description: Containers to add to environment
+    items:
+      $ref: '#/definitions/Node'
+  remove:
+    type: array
+    description: Containers to remove from environment
+    items:
+      $ref: '#/definitions/RemoveNode'

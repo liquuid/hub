@@ -1,0 +1,22 @@
+type: object
+properties:
+  environmentSubutaiId:
+    description: id of environment
+    type: string
+  environmentName:
+    description: name of environment
+    type: string
+  containerSubutaiId:
+    description: id of container
+    type: string
+  containerName:
+    description: name of container
+    type: string
+  internalPort:
+    description: internal port of container where domain is mapped
+    type: integer
+    format: int64
+  externalPort:
+    description: internal port of resource host where domain is mapped
+    type: integer
+    format: int64

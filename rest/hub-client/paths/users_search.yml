@@ -1,0 +1,28 @@
+get:
+  summary: Search user
+  description:
+    The endpoint returns details of user by its email or name (one of the parameters must be provided)
+  tags:
+    - User
+    - Info
+  parameters:
+    - name: email
+      in: query
+      description: email of user
+      required: false
+      type: string
+
+    - name: name
+      in: query
+      description: name of user
+      required: false
+      type: string           
+  responses:
+    200:
+      description: User details
+      schema:
+        $ref: '#/definitions/User'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'         

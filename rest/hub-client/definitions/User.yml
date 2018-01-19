@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    description: id of user
+    type: integer
+    format: int64
+  name:
+    description: name of user
+    type: string
+  fingerprint:
+    description: fingerprint of user public PGP key
+    type: string
+  publicKey:
+    description: user public PGP key (PEM)
+    type: string
+  email:
+    description: user email used as username
+    type: string
+  country:
+    description: country of user
+    type: string

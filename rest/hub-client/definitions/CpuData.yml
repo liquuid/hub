@@ -1,0 +1,23 @@
+type: object
+properties:
+  system:
+    type: number
+    format: double
+  idle:
+    type: number
+    format: double      
+  iowait:
+    type: number
+    format: double   
+  user:
+    type: number
+    format: double   
+  nice:
+    type: number
+    format: double   
+  load:
+    type: number
+    format: double   
+  used:
+    type: number
+    format: double        

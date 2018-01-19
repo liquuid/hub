@@ -1,0 +1,24 @@
+get:
+  summary: Peers
+  description:
+    The endpoint returns information about the user peers
+  tags:
+    - Peer
+    - Resource Host
+  parameters:
+    - name: specifier
+      in: path
+      description: Specifies what peers to return. Might be one of&#58; own, shared, favorite, public, all
+      required: true
+      type: string
+  responses:
+    200:
+      description: An array of peers
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Peer'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,5 @@
+type: object
+properties:
+  containerId:
+    type: string
+    description: ID of container to remove

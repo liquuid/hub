@@ -1,0 +1,15 @@
+get:
+  summary: Get info about friends and friendship requests
+  description:
+    The endpoint returns information about friends and friendship requests
+  tags:
+    - Friend
+  responses:
+    200:
+      description: Friends info
+      schema:
+        $ref: '#/definitions/FriendsInfo'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

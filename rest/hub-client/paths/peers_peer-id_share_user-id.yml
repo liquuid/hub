@@ -1,0 +1,58 @@
+put:
+  summary: Share peer
+  description:
+    The endpoint allows to share peer with user
+  tags:
+    - Peer
+    - User
+    - Sharing
+  parameters:
+    - name: peer-id
+      in: path
+      description: id of peer
+      required: true
+      type: string
+      
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'
+
+delete:
+  summary: Unshare peer
+  description:
+    The endpoint allows to unshare peer with user
+  tags:
+    - Peer
+    - User
+    - Sharing
+  parameters:
+    - name: peer-id
+      in: path
+      description: id of peer
+      required: true
+      type: string
+      
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64
+
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'     

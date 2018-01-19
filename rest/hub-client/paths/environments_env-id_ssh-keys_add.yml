@@ -1,0 +1,28 @@
+post:
+  summary: Add ssh key
+  description:
+    The endpoint allows to add ssh key to environment
+  tags:
+    - Environment
+    - SSH
+  consumes:
+    - application/x-www-form-urlencoded 
+  parameters:
+    - name: env-id
+      in: path
+      description: id of environment
+      required: true
+      type: string
+      
+    - name: ssh-key
+      in: formData
+      description: ssh public key in "ssh-rsa" format
+      type: string
+      
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'    

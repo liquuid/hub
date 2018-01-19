@@ -1,0 +1,17 @@
+get:
+  summary: Get balance
+  description:
+    The endpoint returns current balance of user
+  tags:
+    - User
+    - Balance
+
+  responses:
+    200:
+      description: User balance
+      schema:
+        $ref: '#/definitions/Balance'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

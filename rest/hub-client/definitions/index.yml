@@ -1,0 +1,52 @@
+Error:
+  $ref: ./Error.yml
+Environment:
+  $ref: ./Environment.yml
+Container:
+  $ref: ./Container.yml
+Peer:
+  $ref: ./Peer.yml
+ResourceHost:
+  $ref: ./ResourceHost.yml
+NetworkData:
+  $ref: ./NetworkData.yml
+DiskData:
+  $ref: ./DiskData.yml
+DiskModel:
+  $ref: ./DiskModel.yml
+MemoryData:
+  $ref: ./MemoryData.yml
+MemoryModel:
+  $ref: ./MemoryModel.yml
+CpuData:
+  $ref: ./CpuData.yml
+CpuModel:
+  $ref: ./CpuModel.yml
+CreateEnvironmentRequest:
+  $ref: ./CreateEnvironmentRequest.yml
+Node:
+  $ref: ./Node.yml
+ContainerQuota:
+  $ref: ./ContainerQuota.yml
+ModifyEnvironmentRequest:
+  $ref: ./ModifyEnvironmentRequest.yml
+RemoveNode:
+  $ref: ./RemoveNode.yml
+SshKey:
+  $ref: ./SshKey.yml
+Balance:
+  $ref: ./Balance.yml
+User:
+  $ref: ./User.yml
+Organization:
+  $ref: ./Organization.yml
+Member:
+  $ref: ./Member.yml
+Domain:
+  $ref: ./Domain.yml
+DomainAssignment:
+  $ref: ./DomainAssignment.yml
+FriendsInfo:
+  $ref: ./FriendsInfo.yml
+Friend:
+  $ref: ./Friend.yml

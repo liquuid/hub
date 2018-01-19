@@ -1,0 +1,16 @@
+type: object
+properties:
+  name:
+    type: string
+    description: ssh key name taken from ssh key comment
+  sshKey:
+    type: string
+    description: SSH public key in "ssh-rsa" format
+  userId:
+    type: integer
+    format: int64
+    description: Id of user that added ssh key
+  createDate:
+    type: string
+    format: date-time
+    description: Date of key addition

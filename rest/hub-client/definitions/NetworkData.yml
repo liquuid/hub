@@ -1,0 +1,8 @@
+type: object
+properties:
+  netIn:
+    type: number
+    format: double      
+  netOut:
+    type: number
+    format: double

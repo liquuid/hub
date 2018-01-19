@@ -1,0 +1,13 @@
+type: object
+properties:
+  frequency:
+    type: integer
+    format: int64
+    description: CPU frequency
+  core:
+    type: integer
+    format: int32
+    description: Number of CPU cores
+  name:
+    type: string
+    description: Name of CPU model

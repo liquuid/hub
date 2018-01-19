@@ -1,0 +1,48 @@
+type: object
+properties:
+  container_id:
+    type: string
+    description: Unique id of container
+  container_name:
+    type: string 
+    description: Name of container
+  container_hostname:
+    type: string
+    description: Hostname of container
+  container_ip:
+    type: string
+    description: IP of container
+  container_state: 
+    type: string
+    description: State of container
+    enum: 
+      - BUILDING
+      - STARTING
+      - RUNNING
+      - STOPPING
+      - STOPPED
+      - ABORTING
+      - FREEZING
+      - FROZEN
+      - UNKNOWN
+  container_size:
+    type: string
+    description: Size of container
+    enum:
+      - TINY
+      - SMALL
+      - MEDIUM
+      - LARGE
+      - HUGE
+  container_peer_id:
+    type: string
+    description: Id of hosting peer
+  container_template_id:
+    type: string
+    description: Id of container template
+  container_template_name:
+    type: string
+    description: Name of container template
+  rh_ip:
+    type: string
+    description: IP of hosting resource host

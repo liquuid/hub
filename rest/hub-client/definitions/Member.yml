@@ -1,0 +1,13 @@
+type: object
+properties:
+  userId:
+    description: id of user
+    type: integer
+    format: int64
+  username:
+    description: name of user
+    type: string
+  joindDate:
+    description: Date when user joined organization
+    type: string
+    format: date-time

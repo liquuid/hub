@@ -1,0 +1,39 @@
+put:
+  summary: Reserve domain
+  description:
+    The endpoint allows to reserve domain
+  tags:
+    - Domain
+  parameters:
+    - name: domain
+      in: path
+      description: domain e.g. my-domain or sub-domain.my-domain
+      required: true
+      type: string
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error' 
+
+delete:
+  summary: Delete domain
+  description:
+    The endpoint allows to delete domain
+  tags:
+    - Domain
+  parameters:
+    - name: domain
+      in: path
+      description: domain e.g. my-domain or sub-domain.my-domain
+      required: true
+      type: string
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'        

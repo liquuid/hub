@@ -1,0 +1,18 @@
+get:
+  summary: View domains
+  description:
+    The endpoint returns domains of user
+  tags:
+    - Domain
+  responses:
+    200:
+      description: An array of domains
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Domain'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'
+        

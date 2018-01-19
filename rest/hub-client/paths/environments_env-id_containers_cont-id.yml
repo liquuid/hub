@@ -1,0 +1,26 @@
+delete:
+  summary: Destroy container
+  description:
+    The endpoint allows to destroy container
+  tags:
+    - Environment
+    - Container
+  parameters:
+    - name: env-id
+      in: path
+      description: id of environment
+      required: true
+      type: string
+    - name: cont-id
+      in: path
+      description: id of container
+      required: true
+      type: string 
+
+  responses:
+    202:
+      description: Http ACCEPTED status is returned in case container destruction started successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'      

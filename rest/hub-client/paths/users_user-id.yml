@@ -1,0 +1,23 @@
+get:
+  summary: Get user details
+  description:
+    The endpoint returns details of user
+  tags:
+    - User
+    - Info
+  parameters:
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64      
+  responses:
+    200:
+      description: User details
+      schema:
+        $ref: '#/definitions/User'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

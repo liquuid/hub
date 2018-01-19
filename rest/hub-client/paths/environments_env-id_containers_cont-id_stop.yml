@@ -1,0 +1,26 @@
+put:
+  summary: Stop container
+  description:
+    The endpoint allows to stop container
+  tags:
+    - Environment
+    - Container
+  parameters:
+    - name: env-id
+      in: path
+      description: id of environment
+      required: true
+      type: string
+    - name: cont-id
+      in: path
+      description: id of container
+      required: true
+      type: string 
+
+  responses:
+    202:
+      description: Http ACCEPTED status is returned in case operation started successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'    

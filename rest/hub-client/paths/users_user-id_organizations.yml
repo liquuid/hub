@@ -1,0 +1,32 @@
+get:
+  summary: View user organizations
+  description:
+    The endpoint returns organizations of user. This endpoint is accessible for admin or user herself!
+  tags:
+    - User
+    - Organization
+  parameters:
+    - name: user-id
+      in: path
+      description: id of user
+      required: true
+      type: integer
+      format: int64   
+      
+    - name: own
+      in: query
+      description: true to return user own organizations, false to return organizations where user is member
+      required: false
+      type: boolean
+      default: false
+  responses:
+    200:
+      description: An array of organizations
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Organization'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,39 @@
+type: object
+properties:
+  rh_id:
+    type: string
+    description: Unique id of Resource host
+  rh_name:
+    type: string 
+    description: Name of Resource host
+  rh_creation_date:
+    type: string
+    format: date
+    description: Creation date of Resource host
+  rh_uptime:
+    type: number
+    format: double
+    description: Uptime of Resource host
+  rh_p2p_version:
+    type: string
+    description: P2P version of Resource host
+  rh_p2p_status:
+    type: string
+    description: P2P status of Resource host
+    enum:
+      - WORKS
+      - FAILS
+  rh_cpu_model:
+    $ref: '#/definitions/CpuModel'
+  rh_cpu_data:
+    $ref: '#/definitions/CpuData'
+  rh_memory_model:
+    $ref: '#/definitions/MemoryModel'
+  rh_memory_data:
+    $ref: '#/definitions/MemoryData'
+  rh_disk_model:
+    $ref: '#/definitions/DiskModel'
+  rh_disk_data:
+    $ref: '#/definitions/DiskData'
+  rh_net_data:
+    $ref: '#/definitions/NetworkData'

@@ -1,0 +1,16 @@
+type: object
+properties:
+  environmentName:
+    type: string
+    description: Name of future environment
+  exchangeSshKeys:
+    type: boolean
+    description: Indicates whether to exchange ssh keys between environment containers
+  registerHosts:
+    type: boolean
+    description: Indicates whether to register container hostnames between environment containers in their /etc/hosts file
+  nodes:
+    type: array
+    description: Future environment containers
+    items:
+      $ref: '#/definitions/Node'

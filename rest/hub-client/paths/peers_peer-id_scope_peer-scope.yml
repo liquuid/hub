@@ -1,0 +1,28 @@
+put:
+  summary: Update peer scope
+  description:
+    The endpoint allows to update scope of peer
+  tags:
+    - Peer
+  parameters:
+    - name: peer-id
+      in: path
+      description: id of peer
+      required: true
+      type: string
+    - name: peer-scope
+      in: path
+      description: scope of peer
+      required: true
+      type: string 
+      enum:
+        - PUBLIC
+        - PRIVATE
+        - SHARED
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

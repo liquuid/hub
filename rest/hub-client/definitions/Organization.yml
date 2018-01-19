@@ -1,0 +1,31 @@
+type: object
+properties:
+  name:
+    description: name of organization
+    type: string
+  description:
+    type: string
+  type:
+    description: type of organization
+    type: string
+    enum:
+      - EDUCATIONAL
+      - OPEN_SOURCE
+      - OTHER
+      - TEST
+  verified:
+    description: indicates if organization is verified by Hub
+    type: boolean
+  registerDate:
+    description: Date when organization was created
+    type: string
+    format: date-time
+  owner:
+    description: Owner of organization
+    $ref: '#/definitions/Member'
+  members:
+    description: Members of organization
+    type: array
+    items:
+      $ref: '#/definitions/Member'
+      

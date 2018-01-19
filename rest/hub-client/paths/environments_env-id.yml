@@ -1,0 +1,20 @@
+delete:
+  summary: Destroy environment
+  description:
+    The endpoint allows to destroy environment
+  tags:
+    - Environment
+  parameters:
+    - name: env-id
+      in: path
+      description: id of environment
+      required: true
+      type: string
+
+  responses:
+    202:
+      description: Http ACCEPTED status is returned in case environment destruction started successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

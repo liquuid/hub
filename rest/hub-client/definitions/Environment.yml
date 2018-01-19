@@ -1,0 +1,44 @@
+type: object
+properties:
+  environment_id:
+    type: string
+    description: Unique identifier representing a specific environment
+  environment_name:
+    type: string
+    description: Name of environment
+  environment_status:
+    type: string
+    description: Status of environment
+  environment_status_desc:
+    type: string
+    description: Description of environment status
+  environment_owner_hub_id:
+    type: string
+    description: Id of environment owner 
+  environment_owner:
+    type: string
+    description: Name of environment owner
+  environment_hash:
+    type: string
+    description: P2P hash of environment
+  environment_key:
+    type: string
+    description: P2P key of environment
+  environment_ttl:
+    type: integer
+    format: int64
+    description: TTL of P2P key
+  environment_p2p_subnet:
+    type: string
+    description: P2P subnet of environment
+  environment_subnet_cidr:
+    type: string
+    description: CIDR used for environment containers' IPs
+  environment_vni:
+    type: integer
+    format: int64
+    description: VNI number of environment
+  environment_containers:
+    type: array
+    items:
+      $ref: '#/definitions/Container'

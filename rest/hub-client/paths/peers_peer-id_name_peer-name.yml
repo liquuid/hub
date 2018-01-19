@@ -1,0 +1,24 @@
+put:
+  summary: Update peer name
+  description:
+    The endpoint allows to update name of peer
+  tags:
+    - Peer
+  parameters:
+    - name: peer-id
+      in: path
+      description: id of peer
+      required: true
+      type: string
+    - name: peer-name
+      in: path
+      description: name of peer
+      required: true
+      type: string 
+  responses:
+    200:
+      description: Operation performed successfully
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'     
